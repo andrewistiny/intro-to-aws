@@ -1,8 +1,8 @@
-# Configure AWS and Serverless
+# AWS and Serverless
 [Advanced] - Setting up AWS accounts and Serverless Framework
 
 ## What is AWS?
-Amazon Web Services(AWS) is a platform of cloud computing which provides a simple way to access servers, storage, databases and a broad set of applications. We are basically renting out AWS servers to host our application instead of having to maintain our own.
+Amazon Web Services(AWS) is a platform of cloud computing which provides a simple way to access servers, storage, databases and a broad set of applications. We are basically renting out AWS servers to host our application instead of having to maintain our own. There are many type of services in AWS, each performing a specific functionality.
 
 ## Why use AWS?
 - **Low Cost** - As developers, we pay end up paying less if we want to host our application on AWS servers. Since AWS has many active users, it drives down the cost of server use. 
@@ -13,7 +13,10 @@ Amazon Web Services(AWS) is a platform of cloud computing which provides a simpl
 AWS allows us to access the their platform through **programmatic access** or **AWS management console access**. In this course, we will be using **programmatic access** through the [Serverless Framework](https://serverless.com/) which allows us to access AWS through the command line and code editor.  
 
 ## What is AWS Lambda?
-A compute service that allows developers to run code without having to manage a server. No express server needed. A Lambda is basically a function in the cloud. 
+An AWS service that allows developers to run code without having to manage a server. No express server needed. A Lambda is basically a function in the cloud. 
+
+## What is API Gateway?
+An AWS service that enables developers to create, publish, maintain, monitor, and secure APIs at any scale. You can create APIs that access AWS or other web services, as well as data stored in the AWS Cloud. It allows developers to create CRUD routes(GET, POST, PUT, DELETE).
 
 ## What does deploy mean?
 Moving our application to the AWS cloud/servers. In our case, we will be deploying our Lambda function. 
@@ -35,41 +38,59 @@ Moving our application to the AWS cloud/servers. In our case, we will be deployi
   ```
   serverless config credentials --provider aws --key YOUR_ACCESS_KEY --secret YOUR_SECRET_KEY
   ```
-7. Create a new directory/project`mkdir YOUR_PROJECT_NAME`
-8. CD into your directory/project `cd YOUR_PROJECT_NAME`
-9. Create boilerplate/template to use Serverless**
+  
+## Create Serveless Template and Lambda Function
+1. Create a new directory/project`mkdir YOUR_PROJECT_NAME`
+2. CD into your directory/project `cd YOUR_PROJECT_NAME`
+3. Create boilerplate/template to use Serverless**
 ```
 serverless create --template aws-nodejs
 ```
-10. Test Lambda function locally
- ```
- serverless invoke local -f FUNCTION_NAME --path serverless.yml
- ```
-11. Change service name in `serverless.yml` file
-12. Uncomment the following:* 
+3. Change service name in `serverless.yml` file
+4. Uncomment the following:* 
 ```
 stage: dev
 region: us-east-1
 ```
   - Then set region to `us-west-2`
-
-13. Deploy your code
+5. Test Lambda function locally
+ ```
+ serverless invoke local -f FUNCTION_NAME 
+ ```
+6. Deploy your code
 ```
 serverlesss deploy
 ```
-14 Change message in lambda function then redeploy function only
+7. Change message in lambda function then redeploy function only
 ```
 serverless deploy -f FUNCTION_NAME
 ```
-15. Invoke deployed function
+8. Invoke deployed function
 ```
 serverless invoke -f FUNCTION_NAME
 ```
-16. If need help with serverless commands
+9. If need help with serverless commands
 ```
 serverless --help
 ```
+** Create API Gateway `GET` request
+
 **Congratulations you have made your first deployment**
+
+# Class Exercise
+1. Create a `GET` request to your Lambda function, then render out text `Hello World!` in your frontend
+
+**Hint:** create file structure in your root path for you frontend
+```
+serverless-demo
+|
++ --public
+    |
+    +-- index.html
+    +-- styles.css
+    +-- app.js
+```
+2. Create a `GET` request to your Lambda function, which calls the [Chuck Norris API](http://www.icndb.com/api/) random jokes endpont. Render out a random joke to your frontend everytime you refresh your browser. 
 
 ## Resources
 [What is AWS?](https://aws.amazon.com/what-is-aws/)
