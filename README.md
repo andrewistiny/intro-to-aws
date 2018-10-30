@@ -73,7 +73,10 @@ serverless --help
 
 ## Resources
 [What is AWS?](https://aws.amazon.com/what-is-aws/)
+
 [How does Amazon Web Services (AWS) work? - Quora](https://www.quora.com/How-does-Amazon-Web-Services-AWS-work)
+
 [What Is AWS Lambda?](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
+
 [Serverless Framework - AWS Lambda Guide - Quick Start](https://serverless.com/framework/docs/providers/aws/guide/quick-start/)
 
