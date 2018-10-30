@@ -1,4 +1,4 @@
-# congfigure-aws-and-serverless
+# Configure AWS and Serverless
 [Advanced] - Setting up AWS accounts and Serverless Framework
 
 ## What is AWS?
