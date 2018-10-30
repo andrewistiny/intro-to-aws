@@ -1,5 +1,5 @@
 # AWS and Serverless
-[Advanced] - Setting up AWS accounts and Serverless Framework
+[Advanced] - AWS Intro, Set up AWS and Serverless, Lambda, API Gateway
 
 ## What is AWS?
 Amazon Web Services(AWS) is a platform of cloud computing which provides a simple way to access servers, storage, databases and a broad set of applications. We are basically renting out AWS servers to host our application instead of having to maintain our own. There are many type of services in AWS, each performing a specific functionality.
@@ -20,6 +20,11 @@ An AWS service that enables developers to create, publish, maintain, monitor, an
 
 ## What does deploy mean?
 Moving our application to the AWS cloud/servers. In our case, we will be deploying our Lambda function. 
+
+## What will we be doing?
+We will conifgure our AWS credentials and Serverless credentials, then will set up our Lambda function and API Gateway to deploy a `GET` url enpoint for our frontend client. 
+
+![AWS Diagram](https://i.imgur.com/JJUUeOi.png?1)
 
 ## Configuring AWS and Serverless
 
@@ -97,7 +102,9 @@ serverless-demo
 
 [How does Amazon Web Services (AWS) work? - Quora](https://www.quora.com/How-does-Amazon-Web-Services-AWS-work)
 
-[What Is AWS Lambda?](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
-
 [Serverless Framework - AWS Lambda Guide - Quick Start](https://serverless.com/framework/docs/providers/aws/guide/quick-start/)
 
+#### AWS Services
+[What Is AWS Lambda?](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
+
+[What Is Amazon API Gateway?](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html)
