@@ -118,7 +118,7 @@ serverless-demo
     +-- app.js
 ```
 3. Use axios in your `app.js` to get a random food from your newly created GET endpoint
-4. Render the following to your browser `Today, I will eat INSERT_FOOD_VALUE`
+4. Render the following to your browser `Today, I will eat a ${INSERT_FOOD_VALUE}`
 5. Your browser should render a different food everytime you refresh
 
 ## Resources
