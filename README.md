@@ -104,7 +104,6 @@ functions:
  serverless deploy
  ```
  4. You should see a `GET` endpoint url under `endpoints:`
-**Congratulations you have made your first deployment**
 
 # Class Exercise
 1. In your Lambda function, create a random food generator
