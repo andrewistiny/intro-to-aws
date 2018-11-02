@@ -78,7 +78,7 @@ serverless invoke -f FUNCTION_NAME
 ```
 serverless --help
 ```
-** Create API Gateway `GET` request
+**Create API Gateway `GET` request**
 1. Paste in the following code snippet in `serverless.yml`
 ```
 functions:
