@@ -88,12 +88,20 @@ functions:
       - http:
           path: PATH_NAME
           method: get
+          cors: true
  ```
- 2. Deploy your code
+ 2. Paste in the following in your `response` object, above the `body` property
+ ```
+ headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': true
+    },
+ ```
+ 3. Deploy your code
  ```
  serverless deploy
  ```
- 3. You should see a `GET` endpoint url under `endpoints:`
+ 4. You should see a `GET` endpoint url under `endpoints:`
 **Congratulations you have made your first deployment**
 
 # Class Exercise
