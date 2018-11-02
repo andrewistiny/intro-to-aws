@@ -44,7 +44,7 @@ We will conifgure our AWS credentials and Serverless credentials, then will set 
   serverless config credentials --provider aws --key YOUR_ACCESS_KEY --secret YOUR_SECRET_KEY
   ```
   
-## Create Serveless Template and Lambda Function
+## Create Serverless Template and Lambda Function
 1. Create a new directory/project`mkdir YOUR_PROJECT_NAME`
 2. CD into your directory/project `cd YOUR_PROJECT_NAME`
 3. Create boilerplate/template to use Serverless**
@@ -79,13 +79,26 @@ serverless invoke -f FUNCTION_NAME
 serverless --help
 ```
 ** Create API Gateway `GET` request
-
+1. Paste in the following code snippet in `serverless.yml`
+```
+functions:
+  FUNCTION_NAME:
+    handler: handler.FUNCTION_NAME
+    events:
+      - http:
+          path: PATH_NAME
+          method: get
+ ```
+ 2. Deploy your code
+ ```
+ serverless deploy
+ ```
+ 3. You should see a `GET` endpoint url under `endpoints:`
 **Congratulations you have made your first deployment**
 
 # Class Exercise
-1. Create a `GET` request to your Lambda function, then render out text `Hello World!` in your frontend
-
-**Hint:** create file structure in your root path for you frontend
+1. In your Lambda function, create a random food generator
+2. Create file structure in your root path for you frontend
 ```
 serverless-demo
 |
@@ -95,7 +108,9 @@ serverless-demo
     +-- styles.css
     +-- app.js
 ```
-2. Create a `GET` request to your Lambda function, which calls the [Chuck Norris API](http://www.icndb.com/api/) random jokes endpont. Render out a random joke to your frontend everytime you refresh your browser. 
+3. Use axios in your `app.js` to get a random food from your newly created GET endpoint
+4. Render the following to your browser `Today, I will eat INSERT_FOOD_VALUE`
+5. Your browser should render a different food everytime you refresh
 
 ## Resources
 [What is AWS?](https://aws.amazon.com/what-is-aws/)
