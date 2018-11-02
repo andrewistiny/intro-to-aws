@@ -91,6 +91,8 @@ functions:
           cors: true
  ```
  2. Paste in the following in your `response` object, above the `body` property
+ 
+ **This allows [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)**
  ```
  headers: {
       'Access-Control-Allow-Origin': '*',
@@ -126,6 +128,7 @@ serverless-demo
 [How does Amazon Web Services (AWS) work? - Quora](https://www.quora.com/How-does-Amazon-Web-Services-AWS-work)
 
 [Serverless Framework - AWS Lambda Guide - Quick Start](https://serverless.com/framework/docs/providers/aws/guide/quick-start/)
+[Serverless Framework - CORS & API Gateway](https://serverless.com/blog/cors-api-gateway-survival-guide/)
 
 #### AWS Services
 [What Is AWS Lambda?](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
