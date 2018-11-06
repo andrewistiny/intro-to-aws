@@ -1,4 +1,4 @@
-# AWS and Serverless
+# Intro to AWS
 [Advanced] - AWS Intro, Set up AWS and Serverless, Lambda, API Gateway
 
 ## What is AWS?
