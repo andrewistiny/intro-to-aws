@@ -24,7 +24,7 @@ Moving our application to the AWS cloud/servers. In our case, we will be deployi
 ## What will we be doing?
 We will conifgure our AWS credentials and Serverless credentials, then will set up our Lambda function and API Gateway to deploy a `GET` url enpoint for our frontend client. 
 
-![AWS Diagram](https://i.imgur.com/d6XYzu6.png?1)
+![AWS Diagram](https://i.imgur.com/tF985p6.png)
 
 ## Configuring AWS and Serverless
 
