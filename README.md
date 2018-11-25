@@ -58,13 +58,13 @@ stage: dev
 region: us-east-1
 ```
   - Then set region to `us-west-2`
-5. Test Lambda function locally
- ```
- serverless invoke local -f FUNCTION_NAME 
- ```
-6. Deploy your code
+5. Deploy your code
 ```
 serverlesss deploy
+```
+6. Invoke deployed function
+```
+serverless invoke -f FUNCTION_NAME 
 ```
 7. Change message in lambda function then redeploy function only
 ```
@@ -72,7 +72,7 @@ serverless deploy -f FUNCTION_NAME
 ```
 8. Invoke deployed function
 ```
-serverless invoke -f FUNCTION_NAME
+serverless invoke -f FUNCTION_NAME 
 ```
 9. If need help with serverless commands
 ```
@@ -104,6 +104,13 @@ functions:
  serverless deploy
  ```
  4. You should see a `GET` endpoint url under `endpoints:`
+
+# Serverless Workflow
+1. Write your functions
+2. Use`serverless deploy`only when you've made changes to`serverless.yml`
+3. Use`serverless deploy function -f FUNCTION_NAME`to rapidly deploy changes when you are working on a specific AWS Lambda Function.
+4. Use`serverless invoke -f FUNCTION_NAME`to test your AWS Lambda Functions on AWS.
+5. Open up a separate tab in your console and stream logs in there via`serverless logs -f FUNCTION_NAME -t`.
 
 # Class Exercise
 1. In your Lambda function, create a random food generator
