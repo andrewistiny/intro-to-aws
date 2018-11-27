@@ -74,7 +74,11 @@ serverless deploy -f FUNCTION_NAME
 ```
 serverless invoke -f FUNCTION_NAME 
 ```
-9. If need help with serverless commands
+9. Get logs from deployed function
+```
+serverless logs -f FUNCTION_NAME -t
+```
+10. If need help with serverless commands
 ```
 serverless --help
 ```
