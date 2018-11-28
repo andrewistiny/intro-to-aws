@@ -63,7 +63,7 @@ region: us-east-1
 serverlesss deploy
 ```
 6. Invoke deployed function
-```
+```C
 serverless invoke -f FUNCTION_NAME 
 ```
 7. Change message in lambda function then redeploy function only
